@@ -324,3 +324,72 @@ main .hero {
 .hero .card-welcome .card-body p:first-letter {
   text-transform: capitalize;
 }
+/************************************/
+/*star services section */
+main .services {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
+main .services .card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  padding: 15px;
+  border: 1px solid var(--border-bottom-color);
+  color: var(--text-color);
+}
+main .services .card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(15, 69%, 37%);
+}
+main .services .card .card-header .icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 40px;
+  height: 40px;
+}
+main .services .card .card-header .icon img {
+  background-color: hsl(15, 69%, 37%);
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+}
+main .services .card .card-header .num {
+  font-family: var(--special-font);
+}
+main .services .card .card-body {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+main .services .card .card-body p:first-child {
+  font-family: var(--special-font);
+  color: #000;
+  font-size: 16px;
+}
+main .services .wifi .card-header {
+  color: hsl(230, 49%, 56%);
+}
+main .services .wifi .card-header .icon img {
+  background-color: hsl(230, 49%, 56%);
+}
+main .services .wifi .card-body .password,
+.network {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  background-color: hsl(36, 22%, 86%);
+  padding: 10px;
+  border-radius: 8px;
+}
+/*end services section */
