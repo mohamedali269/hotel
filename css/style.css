@@ -6,6 +6,8 @@
 :root {
   --border-bottom-color: hsl(36, 22%, 86%);
   --text-color: hsl(33, 17%, 41%);
+  --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --special-font: "Fraunces";
 }
 @font-face {
   font-family: "DMSans"; /*ده الخط الأساسي للموقع.*/
@@ -30,7 +32,7 @@ body {
 .app {
   display: flex;
   width: 90%;
-  margin: auto;
+  margin: 20px auto;
   background-color: hsl(35, 60%, 96%);
 }
 /*start aside properties */
@@ -114,7 +116,7 @@ aside .row .weather-card p {
   font-weight: 400;
 }
 aside .row .weather-card p:nth-child(2) {
-  font-family: "Fraunces";
+  font-family: var(--special-font);
   font-size: 22px;
   color: black;
 }
@@ -145,7 +147,7 @@ main header {
 }
 
 main header .logo {
-  font-family: "Fraunces";
+  font-family: var(--special-font);
   font-size: 28px;
   position: relative;
   letter-spacing: 1.5px;
@@ -191,3 +193,134 @@ main header .btn-header button:last-child {
   cursor: pointer;
 }
 /*end header properties*/
+/*start hearo sectio  */
+
+/*end hearo sectio  */
+main .hero {
+  position: relative;
+  width: 700px;
+  height: 450px;
+  margin: auto;
+  color: var(--text-color);
+}
+.hero .card {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 350px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  transform: rotate(-5deg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.hero .card-welcome {
+  position: absolute;
+  top: 40px;
+  left: 346px;
+  width: 350px;
+  height: 400px;
+  box-shadow: var(--box-shadow);
+  border-radius: 20px;
+  z-index: 2;
+  transform: rotate(5deg);
+  box-shadow: var(--box-shadow);
+
+  background-color: hsl(15, 74%, 41%);
+}
+.hero .card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-bottom-color);
+}
+.hero .card .card-header .left-card-header p:last-child {
+  color: #000;
+  font-family: var(--special-font);
+  font-size: 20px;
+}
+
+.hero .card .card-body .top-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.hero .card .card-body .top-card-body div {
+  text-align: center;
+}
+.hero .card .card-body .top-card-body div p {
+  color: var(--text-color);
+  font-size: 12px;
+}
+
+.hero .card .card-body .top-card-body div p:nth-child(2) {
+  font-family: var(--special-font);
+  font-size: 24px;
+  color: #000;
+}
+.hero .card .card-body .bottom-card-body {
+  margin: 20px 0;
+  border-top: 1px solid var(--border-bottom-color);
+  border-bottom: 1px solid var(--border-bottom-color);
+}
+.hero .card .card-body .bottom-card-body div {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero .card .footer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.hero .card .footer div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero .card .footer div:first-child span:last-child {
+  font-size: 22px;
+  font-family: var(--special-font);
+}
+.hero .card-welcome {
+  color: #ffffffc2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero .card-welcome .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.hero .card-welcome .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.hero .card-welcome .card-body p {
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+.hero .card-welcome .card-body p:first-child {
+  font-family: var(--special-font);
+  color: hsl(42, 83%, 58%);
+}
+.hero .card-welcome .card-body p:nth-child(2) {
+  font-family: var(--special-font);
+  font-size: 22px;
+}
+.hero .card-welcome .card-body p:first-letter {
+  text-transform: capitalize;
+}
