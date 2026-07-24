@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --border-bottom-color: hsl(36, 22%, 86%);
+  --text-color: hsl(33, 17%, 41%);
+}
+@font-face {
+  font-family: "DMSans"; /*ده الخط الأساسي للموقع.*/
+
+  src: url("../assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "Fraunces"; /*ده خط Serif (فيه زوائد صغيرة على الحروف)، وبيستخدم للعناوين الكبيرة.*/
+
+  src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "DMMono-Regular"; /*الكلمات الصغيرة المكتوبة بحروف كبيرة (Labels)، المعلومات التقنية، الأكواد، الأرقام المطبوعة*/
+  src: url("../assets/fonts/dm-mono/DMMono-Regular.ttf");
+}
+body {
+  font-size: 14px;
+  background-color: hsl(36, 22%, 86%);
+  font-family: "DMSans";
+}
+/*layout*/
+.app {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  background-color: hsl(35, 60%, 96%);
+}
+/*start aside properties */
+.app aside {
+  flex-basis: 25%;
+  padding: 10px 5px;
+  border-right: 1px solid var(--border-bottom-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1000px;
+}
+.app main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+/***************/
+aside .row .aside-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 3px solid var(--border-bottom-color);
+}
+aside .row .aside-header div:first-child {
+  color: hsl(15, 69%, 37%);
+  font-weight: 600;
+}
+aside .row .aside-header div:last-child {
+  font-family: "DMMono-Regular";
+  font-weight: 600;
+}
+aside .row .aside-header img {
+  width: 40px;
+}
+aside nav {
+  padding: 10px;
+}
+aside nav ul {
+  list-style: none;
+}
+aside nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 15px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+aside nav ul li:hover {
+  background-color: hsl(0, 0%, 100%);
+}
+aside nav ul li span {
+  text-transform: capitalize;
+  letter-spacing: 1.5;
+}
+aside .row .weather-card {
+  width: 90%;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, hsl(45, 100%, 74%), hsl(42, 83%, 58%));
+  border-radius: 8px;
+  padding: 12px;
+  position: relative;
+}
+aside .row .weather-card::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-bottom-color);
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+}
+aside .row .weather-card p {
+  margin: 5px;
+  color: var(--text-color);
+  font-weight: 400;
+}
+aside .row .weather-card p:nth-child(2) {
+  font-family: "Fraunces";
+  font-size: 22px;
+  color: black;
+}
+aside .row .aside-footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+aside .row .aside-footer p {
+  color: var(--text-color);
+}
+aside .row .aside-footer p:first-child {
+  margin-bottom: 15px;
+}
+aside .row .aside-footer p:last-child {
+  margin-top: 15px;
+}
+/*end aside properties*
